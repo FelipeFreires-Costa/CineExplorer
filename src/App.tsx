@@ -1,4 +1,5 @@
 import './App.css'
+import { MovieCard } from './components/MovieCard'
 import { useMovies } from './hooks/useMovies'
 
 function App() {
@@ -7,15 +8,15 @@ function App() {
 
     if(loading) return <p>Carregando filmes...</p>
     if(error) return <p style={{color: 'red'}}>{error}</p>
-
+  console.log(movies)
   return (
     <div>
       <h1>CineExplorer</h1>
-      <ul>
+      <div className='movie-grid'>
         {movies.map(movie => (
-          <li key={movie.id}>{movie.title}</li>
+          <MovieCard key={movie.id} movie={movie} />
         ))}
-      </ul>
+      </div>
     </div>
   )
 }

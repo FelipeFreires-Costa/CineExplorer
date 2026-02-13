@@ -1,0 +1,47 @@
+.card {
+  position: relative;
+  width: 200px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+  z-index: 10;
+}
+
+.poster {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; /* Garante que a imagem preencha sem distorcer */
+}
+
+.info {
+  padding: 12px;
+  color: white;
+}
+
+.title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Coloca "..." se o título for longo demais */
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.star {
+  color: #ffd700; /* Cor Dourada */
+}
